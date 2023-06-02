@@ -34,7 +34,7 @@ mongoose
     console.log("Database connected");
   });
 
-app.use(cors());
+app.use(cors({credentials: true, origin: true}));
 app.use(express.json());
 
 if(process.env.NODE_ENV === 'production'){
