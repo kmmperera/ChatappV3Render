@@ -34,16 +34,23 @@ mongoose
     console.log("Database connected");
   });
 
-app.use(cors());
+const corsOptions = {
+    
+    origin:"*",
+    credentials: true
+}
+
+app.use(cors(corsOptions));
 app.use(express.json());
 
+/*
 app.use((req, res, next)=> {
   res.header("Access-Control-Allow-Origin", "https://chatmev3.onrender.com"); 
 
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
   next();
 });
-
+*/
 
 
 
