@@ -55,7 +55,13 @@ app.use((req, res, next)=> {
   next();
 });
 */
-
+app.use(function(req, res, next) {
+    res.on('finish', () => {
+        console.log(`request url = ${req.originalUrl}`);
+        console.log(res.getHeaders());
+    });
+    next();
+});
 
 
 if(process.env.NODE_ENV === 'production'){
