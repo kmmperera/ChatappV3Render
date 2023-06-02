@@ -39,11 +39,14 @@ const corsOptions = {
     origin:"*",
     credentials: true,
     preflightContinue: true,
+    methods: "GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS",
+
 }
 
 app.use(cors(corsOptions));
 app.use(express.json());
-app.options('*', cors());
+
+//app.options('*', cors());
 /*
 app.use((req, res, next)=> {
   res.header("Access-Control-Allow-Origin", "https://chatmev3.onrender.com"); 
