@@ -39,7 +39,7 @@ const corsOptions = {
     origin:"*",
     credentials: true,
     preflightContinue: true,
-    methods: "GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS",
+    methods: "GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS"
 
 }
 
