@@ -37,7 +37,7 @@ mongoose
 app.use(cors());
 app.use(express.json());
 
-app.use(function(req, res, next) {
+app.use((req, res, next)=> {
   res.header("Access-Control-Allow-Origin", "https://chatmev3.onrender.com"); 
 
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
