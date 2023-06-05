@@ -72,7 +72,7 @@ const Chats = (props) => {
 
 	useEffect(() => {
 		if (socket.current == null) {
-			socket.current = io("wss://chatmev3.onrender.com:10000");
+			socket.current = io("https://chatmev3.onrender.com:10000");
 			socket.current.emit("addUser", userred._id);
 		}
 
